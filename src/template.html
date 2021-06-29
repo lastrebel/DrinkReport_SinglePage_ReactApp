@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@700&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(1, 110, 143);
+            height: 100vh;
+        }
+
+
+        .container {
+            background: #E9E9E9;
+            max-width: 350px;
+            max-height: 300px;
+            padding: 3px;
+            margin: 0 auto;
+
+            /* bellow snippet is 'middle div' from https://stackoverflow.com/questions/396145/how-can-i-vertically-center-a-div-element-for-all-browsers-using-css  */
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .container>h1 {
+            color: #5A5A5A;
+            font-family: Montserrat;
+            font-size: 17px;
+            padding: 20px 6px 5px 6px;
+        }
+
+        .container>div {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container>div>div {
+            background: rgba(255, 255, 255, 1);
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            margin: 3px;
+            padding: 5px;
+            height: 70px;
+            border-radius: 5px;
+
+            overflow: auto;
+
+            font-family: Lato;
+            color: #5A5A5A;
+
+
+            width: 25%;
+            /* position: relative; */
+            /* text-overflow: ellipsis;
+            overflow: auto; */
+        }
+
+        .grow {
+            width: 50% !important;
+        }
+
+        .title {
+            font-weight: 700;
+            font-size: 10px;
+        }
+
+        .value {
+            font-weight: 300;
+        }
+
+        .verbal {
+            font-size: 10px;
+        }
+
+        .value,
+        .verbal {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        input {
+            width: 100%;
+            font-size: 16px;
+            font-weight: 300;
+            padding: 2px 5px;
+            background-color: rgba(22, 22, 22, 0.1);
+            color: #5A5A5A;
+            border-radius: 5px;
+            border: 0px solid red;
+            /* height: 15px; */
+        }
+
+
+        /* .col2 {
+            color: red;
+            background: yellow !important;
+            width: 200px !important;
+        }
+
+        
+        .container>.panel {
+            height: 60px;
+        }
+
+        .container>.panel>div {
+            display: block;
+            height: 60px;
+            max-height: 60px !important;
+        }
+
+        .container>div>div {
+            background: green;
+            width: 68px;
+            
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Drinking Report 2</h1>
+        <div class="">
+            <div class="grow">
+                <div class="title">Status</div>
+                <div class="value">43%</div>
+                <div class="verbal">drink 8 more glasses</div>
+            </div>
+            <div class="">
+                <div class="title">Current Amount</div>
+                <div class="value">0.8 l gdsdfsdf sdfsdfs sdfsdv dgfsdf ddf</div>
+            </div>
+            <div class="">
+                <div class="title">Expected Amount</div>
+                <div class="value"><input value="2.5" placeholder="Enter value"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

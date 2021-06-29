@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@700&display=swap');
+
+        * {
+            box-sizing: content-box;
+            margin: 0px;
+            padding: 0px;
+            text-overflow: ellipsis;
+            overflow: auto;
+        }
+
+        .col2 {
+            color: red;
+            background: yellow !important;
+            width: 200px !important;
+        }
+
+        .container {
+            background: purple;
+        }
+
+        .container>.panel {
+            height: 60px;
+        }
+
+        .container>.panel>div {
+            display: block;
+            height: 60px;
+            max-height: 60px !important;
+        }
+
+        .container>div>div {
+            background: green;
+            width: 68px;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        input {
+            width: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Drinking Report 2</h1>
+        <div class="panel">
+            <div class="panel1row col2">
+                <p class="title">Status</p>
+                <p class="value">43%</p>
+                <p class="verbal">drink 8 more glasses</p>
+            </div>
+            <div class="panel1row col1">
+                <p class="title">Current Amount</p>
+                <p class="value">0.8 l gdsdfsdf sdfsdfs sdfsdv dgfsdf ddf</p>
+            </div>
+            <div class="panel1row col1">
+                <p class="title">Expected Amount</p>
+                <input class="value" value="2.5" placeholder="Enter value">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
