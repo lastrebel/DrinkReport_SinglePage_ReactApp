@@ -22,7 +22,7 @@
         .container {
             background: #E9E9E9;
             max-width: 350px;
-            max-height: 300px;
+            /* max-height: 300px; */
             padding: 3px;
             margin: 0 auto;
 
@@ -41,12 +41,12 @@
             padding: 20px 6px 5px 6px;
         }
 
-        .container>div {
+        .panel1 {
             display: flex;
             justify-content: space-around;
         }
 
-        .container>div>div {
+        .panel1>div {
             background: rgba(255, 255, 255, 1);
             display: inline-flex;
             flex-direction: column;
@@ -106,6 +106,82 @@
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+        .panel2 {
+            background: rgba(255, 255, 255, 1);
+            margin: 3px;
+            padding: 5px;
+            height: 200px;
+            border-radius: 5px;
+            font-family: Lato;
+            color: #5A5A5A;
+            overflow: hidden;
+
+        }
+
+        .panel2 .title {
+            padding-bottom: 5px;
+        }
+
+        .panel2 .table_container {
+            height: 90%;
+            overflow: auto;
+        }
+
+        .panel2 table {
+            width: 100%;
+            height: inherit;
+            table-layout: fixed;
+            border-collapse: collapse;
+        }
+
+        .panel2 td,
+        .panel2 th {
+            border-bottom: 1px solid rgba(78, 78, 78, 0.03);
+            text-align: left;
+            padding: 8px;
+            color: #979797;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-height: 40px;
+        }
+
+        .panel2 th {
+            /* these 3 lines use for sticky header in a table */
+            background: #fafafa;
+            position: sticky;
+            box-shadow: 0 4px 4px -1px rgba(78, 78, 78, 0.1);
+            top: 0;
+            /* Don't forget this, required for the stickiness */
+            padding: 2px 8px;
+            font-size: 12px;
+        }
+
+        .panel2 tr:last-child td {
+            border-bottom: 0px solid red;
+        }
+
+        .panel2 td {
+            font-size: 10px;
+        }
+
+        .panel2 td:nth-child(2) {
+            width: 100px;
+            font-size: 12px;
+        }
+
+
         /* .col2 {
             color: red;
             background: yellow !important;
@@ -134,7 +210,7 @@
 <body>
     <div class="container">
         <h1>Drinking Report 2</h1>
-        <div class="">
+        <div class="panel1">
             <div class="grow">
                 <div class="title">Status</div>
                 <div class="value">43%</div>
@@ -149,7 +225,117 @@
                 <div class="value"><input value="2.5" placeholder="Enter value"></div>
             </div>
         </div>
+
+        <div class="panel2">
+            <div class="title">Records</div>
+
+            <div class="table_container">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>detail</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>#1</td>
+                        <td>Water</td>
+                        <td>100 ml</td>
+                        <td>09:30</td>
+                        <td>icons</td>
+                    </tr>
+                    <tr>
+                        <td>#2</td>
+                        <td>Water</td>
+                        <td>150 ml</td>
+                        <td>10:30</td>
+                        <td>icons</td>
+                    </tr>
+                    <tr>
+                        <td>#3</td>
+                        <td>Coffee</td>
+                        <td>200 ml</td>
+                        <td>30:00</td>
+                        <td>icons</td>
+                    </tr>
+                    <tr>
+                        <td>#4</td>
+                        <td>Water</td>
+                        <td>100 ml</td>
+                        <td>16:25</td>
+                        <td>icons</td>
+                    </tr>
+                    <tr>
+                        <td>#5</td>
+                        <td>Bottle rajec neperlivy jhkjhkjkj kjnjnjnj lkjlkjlk</td>
+                        <td>0.5 l</td>
+                        <td>17:30</td>
+                        <td>icons</td>
+                    </tr>
+                    <tr>
+                        <td>#6</td>
+                        <td>Tea</td>
+                        <td>130 ml</td>
+                        <td>20:50</td>
+                        <td>icons</td>
+                    </tr>
+
+
+                    <tr>
+                        <th></th>
+                        <th>mo0o0o0re mo o o re</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>#7</td>
+                        <td>Water</td>
+                        <td>100 ml</td>
+                        <td>09:30</td>
+                        <td>icons</td>
+                    </tr>
+                    <tr>
+                        <td>#8</td>
+                        <td>Water</td>
+                        <td>150 ml</td>
+                        <td>10:30</td>
+                        <td>icons</td>
+                    </tr>
+                    <tr>
+                        <td>#9</td>
+                        <td>Coffee</td>
+                        <td>200 ml</td>
+                        <td>30:00</td>
+                        <td>icons</td>
+                    </tr>
+                    <tr>
+                        <td>#10</td>
+                        <td>Water</td>
+                        <td>100 ml</td>
+                        <td>16:25</td>
+                        <td>icons</td>
+                    </tr>
+                    <tr>
+                        <td>#11</td>
+                        <td>Bottle rajec neperlivy jhkjhkjkj kjnjnjnj lkjlkjlk</td>
+                        <td>0.5 l</td>
+                        <td>17:30</td>
+                        <td>icons</td>
+                    </tr>
+                    <tr>
+                        <td>#12</td>
+                        <td>Tea</td>
+                        <td>130 ml</td>
+                        <td>20:50</td>
+                        <td>icons</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
+
 </body>
 
 </html>
