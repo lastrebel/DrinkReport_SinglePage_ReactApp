@@ -1,4 +1,6 @@
 import React from 'react'
+import { FiEdit2 } from 'react-icons/fi'
+import { IoMdClose } from 'react-icons/io'
 
 function Records({ records }) {
 
@@ -13,7 +15,7 @@ function Records({ records }) {
             <td>{record.item}</td>
             <td>{record.amount}</td>
             <td>{record.time}</td>
-            <td>.</td>
+            <td><FiEdit2 /><IoMdClose /></td>
         </tr>
     ))
 }

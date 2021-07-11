@@ -8,15 +8,16 @@ function PanelTable({ records }) {
 
             <div class="table_container">
                 <table>
-                    <tr>
-                        <th></th>
-                        <th>detail</th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    <Records
-                        records={records} />
+                    <tbody>
+                        <tr>
+                            <th></th>
+                            <th>detail</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <Records records={records} />
+                    </tbody>
                 </table>
             </div>
         </div>
