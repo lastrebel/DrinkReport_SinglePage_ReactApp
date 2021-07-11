@@ -7,10 +7,6 @@ function Wrapper() {
     const [records, setRecords] = useState([]);
 
     const addRecord = record => {
-        if (!record.text || /^\s*$/.test(record.text)) {
-            return
-        }
-
         const newRecords = [record, ...records]
 
         setRecords(newRecords)
