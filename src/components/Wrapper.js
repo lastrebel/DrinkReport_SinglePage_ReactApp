@@ -16,7 +16,9 @@ function Wrapper() {
         <div class="container">
             <h1>Drinking Report 2</h1>
             <PanelStatus />
-            <PanelTable />
+            <PanelTable
+                records={records}
+            />
             <PanelInput onSubmit={addRecord} />
         </div>
     )
