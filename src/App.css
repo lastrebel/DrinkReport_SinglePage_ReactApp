@@ -144,10 +144,13 @@ body {
 
 .panel2 table {
     width: 100%;
-    height: inherit;
+    /* height: inherit; */
     table-layout: fixed;
     border-collapse: collapse;
     border-radius: 5px;
+}
+svg {
+    width: 50%;
 }
 
 .panel2 td,
