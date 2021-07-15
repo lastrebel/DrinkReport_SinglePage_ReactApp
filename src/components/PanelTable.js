@@ -1,7 +1,7 @@
 import React from 'react'
 import Records from './Records'
 
-function PanelTable({ records, removeRecord }) {
+function PanelTable({ records, removeRecord, updateRecord }) {
     return (
         <div class="panel2">
             <div class="title">Records</div>
@@ -17,7 +17,8 @@ function PanelTable({ records, removeRecord }) {
                             <th></th>
                         </tr>
                         <Records records={records}
-                            removeRecord={removeRecord} />
+                            removeRecord={removeRecord}
+                            updateRecord={updateRecord} />
                     </tbody>
                 </table>
             </div>
