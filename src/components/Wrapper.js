@@ -13,11 +13,21 @@ function Wrapper() {
         console.log(record, ...records)
     }
 
+    const updateRecord = (recordId, newValue) => {
+        // if (!newValue.text || /^\s*$/.test(newValue.text)) {
+        //     return;
+        // }
+
+        setRecords(prev => prev.map(item => (item.id === recordId ? newValue : item)))
+    }
+
     const removeRecord = id => {
         const removeArr = [...records].filter(record => record.id !== id)
         setRecords(removeArr)
 
     }
+
+
     // const removeTodo = id => {
     //     const removeArr = [...todos].filter(todo => todo.id !== id)
 
@@ -30,6 +40,7 @@ function Wrapper() {
             <PanelTable
                 records={records}
                 removeRecord={removeRecord}
+                updateRecord={updateRecord}
             />
             <PanelInput onSubmit={addRecord} />
         </div>
