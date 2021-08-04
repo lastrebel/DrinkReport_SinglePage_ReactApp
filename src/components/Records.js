@@ -23,7 +23,8 @@ function Records({ records, removeRecord, updateRecord }) {
     }
 
     if (edit.id) {
-        return <tr><td colspan="5" style={{ padding: '0px', background: '#0000FF' }}><PanelInput edit={edit} onSubmit={submitUpdate} /></td></tr >
+        return <tr><td colspan="5" style={{ padding: '0px', background: '#0000FF' }}>
+            <PanelInput edit={edit} onSubmit={submitUpdate} /></td></tr >
     }
 
     return records.map((record, index) => (
@@ -32,7 +33,8 @@ function Records({ records, removeRecord, updateRecord }) {
             <td>{record.item}</td>
             <td>{record.amount}</td>
             <td>{record.time}</td>
-            <td><FiEdit2 onClick={() => setEdit({ id: record.id, item: record.item })} /><IoMdClose onClick={() => removeRecord(record.id)} /></td>
+            <td><FiEdit2 onClick={() => setEdit({ id: record.id, item: record.item, amount: record.amount, time: record.time })} />
+                <IoMdClose onClick={() => removeRecord(record.id)} /></td>
         </tr>
     ))
 }

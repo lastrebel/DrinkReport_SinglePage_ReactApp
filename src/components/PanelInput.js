@@ -5,7 +5,7 @@ function PanelInput(props) {
     //var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     var time = today.getHours() + ":" + today.getMinutes();
 
-    const [state, setState] = useState({
+    const [state, setState] = useState(props.edit ? props.edit : {
         item: '',
         amount: '',
         time: time,
@@ -44,10 +44,8 @@ function PanelInput(props) {
         <div class="panel3">
             <form className="todo-form" onSubmit={handleSubmit}>
                 <input type="text" value="#2" name="id" className='' onChange={handleChange} />
-                <input type="text" placeholder="Drink name"
-                    name="item" className='' value={state.item} onChange={handleChange} />
-                <input type="text" placeholder="ml" name="amount"
-                    className='' value={state.amount} onChange={handleChange} />
+                <input type="text" placeholder="Drink name" name="item" className='' value={state.item} onChange={handleChange} />
+                <input type="text" placeholder="ml" name="amount" className='' value={state.amount} onChange={handleChange} />
                 <input type="text" name="time" className='' value={state.time} onChange={handleChange} />
                 {/* <!--
                         <input type="text" placeholder="Drink name" value={input} name="text" className='todo-input edit'
