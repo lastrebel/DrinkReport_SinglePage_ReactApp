@@ -8,7 +8,7 @@ function Records({ records, removeRecord, updateRecord }) {
     const [edit, setEdit] = useState({
         id: null,
         item: '',
-        amount: null,
+        amount: 0,
         time: null,
     });
 
@@ -17,7 +17,7 @@ function Records({ records, removeRecord, updateRecord }) {
         setEdit({
             id: null,
             item: '',
-            amount: null,
+            amount: 0,
             time: null,
         })
     }
