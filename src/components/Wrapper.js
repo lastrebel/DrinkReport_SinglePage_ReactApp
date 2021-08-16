@@ -5,6 +5,7 @@ import PanelInput from './PanelInput';
 
 function Wrapper() {
     const [records, setRecords] = useState([]);
+    const [dataFromParent, setDataFromParent] = useState(0)
 
     const addRecord = record => {
         const newRecords = [record, ...records]
@@ -31,6 +32,7 @@ function Wrapper() {
             '\ntype of sum: ', typeof (sum),
             '\nvalue of sum: ', sum
         )
+        setDataFromParent(sum)
         //console.log(filterArr)
 
         //console.log('newRecords of array is: ', newRecords)
@@ -57,7 +59,8 @@ function Wrapper() {
     return (
         <div class="container">
             <h1>Drinking Report 2</h1>
-            <PanelStatus />
+            <PanelStatus
+                dataFromParent={dataFromParent} />
             <PanelTable
                 records={records}
                 removeRecord={removeRecord}

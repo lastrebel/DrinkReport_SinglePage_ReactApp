@@ -1,11 +1,11 @@
 import React from 'react'
 
-function PanelStatus() {
+function PanelStatus({ dataFromParent }) {
     return (
         <div class="panel1">
             <div class="grow">
                 <div class="title">Status</div>
-                <div class="value">43%</div>
+                <div class="value">{dataFromParent}</div>
                 <div class="verbal">drink 8 more glasses</div>
             </div>
             <div class="">
