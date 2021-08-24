@@ -7,23 +7,26 @@ function Wrapper() {
     const [records, setRecords] = useState([]);
     const [dataFromParent, setDataFromParent] = useState(0)
 
-    const addRecord = record => {
-        const newRecords = [record, ...records]
+    function setRecordsAndUpdateSum(newRecords) {
         setRecords(newRecords)
+        updateSum(newRecords)
+    }
 
-
+    function updateSum(newRecords) {
         const newArrayDataOfOjbect = Object.values(newRecords)
         // >> sposob1 nefunguje - to x treba nejak prehodit na cislo
         // >> lebo ako string sa to len pridava namiesto inkrementovania integeru
-        // var filterArr = newArrayDataOfOjbect.map(a => a.amount).reduce((sum, x) => sum += x)
+        var filterArr = newArrayDataOfOjbect.map(a => parseInt(a.amount))
+        var sum = (filterArr.reduce(((sum, x) => sum += x), 0)) / 1000
+
 
         // >> sposob2 funguje ale nemohol som pouzit reduce
         // >> ale zato som mohol pouzit parseInt
-        var filterArr = newArrayDataOfOjbect.map(a => a.amount)
-        let sum = 0
-        for (let i = 0; i < filterArr.length; i++) {
-            sum += parseInt(filterArr[i])
-        }
+        // var filterArr = newArrayDataOfOjbect.map(a => a.amount)
+        // let sum = 0
+        // for (let i = 0; i < filterArr.length; i++) {
+        //     sum += parseInt(filterArr[i])
+        // }
 
         console.log(
             // record, ...records,
@@ -33,6 +36,14 @@ function Wrapper() {
             '\nvalue of sum: ', sum
         )
         setDataFromParent(sum)
+    }
+
+    const addRecord = record => {
+        const newRecords = [record, ...records]
+        setRecordsAndUpdateSum(newRecords)
+
+
+
         //console.log(filterArr)
 
         //console.log('newRecords of array is: ', newRecords)
@@ -46,12 +57,14 @@ function Wrapper() {
         //     return;
         // }
 
-        setRecords(prev => prev.map(item => (item.id === recordId ? newValue : item)))
+        //setRecordsAndUpdateSum(prev => prev.map(item => (item.id === recordId ? newValue : item)))
+        const newRecords = records.map(item => (item.id === recordId ? newValue : item))
+        setRecordsAndUpdateSum(newRecords)
     }
 
     const removeRecord = id => {
         const removeArr = [...records].filter(record => record.id !== id)
-        setRecords(removeArr)
+        setRecordsAndUpdateSum(removeArr)
 
     }
 

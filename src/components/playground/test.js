@@ -9,15 +9,16 @@ function getSum() {
     var getArray = Object.values(newArrayDataOfOjbect)
 
     // const filterArr = getArray.filter(i => i.length > 0)
-    //const filterArr = getArray[1].filter(i)
-    // const filterArr = getArray.map(a => a.value).reduce(((sum, x) => sum += x), 8)
+    // const filterArr = getArray[1].filter(i)
     const filterArr = getArray.map(a => a.value)
+    let sum = filterArr.reduce(((sum, x) => sum += x))
+    // const filterArr = getArray.map(a => a.value)
 
 
-    let sum = 0
-    for (let i = 0; i < filterArr.length; i++) {
-        sum += filterArr[i]
-    }
+    // let sum = 0
+    // for (let i = 0; i < filterArr.length; i++) {
+    //     sum += filterArr[i]
+    // }
 
     return console.log('initial array: ', getArray, 'filterred array: ', filterArr, 'sum of values: ', sum)
 }
